@@ -8,11 +8,11 @@ npm i react-any-height
 # Usage
 
 ```
-import { ReactAnyHeight } from 'react-any-height'
+import { ReactHeightAutoTransition } from 'react-height-auto-transition'
 
 const App = () => (
-  <ReactAnyHeight>
-    <div>Dynamic Height Content</div>
-  </ReactAnyHeight>
+    <ReactHeightAutoTransition>
+      <div>{dynamicContent}</div>
+    </ReactHeightAutoTransition>
 )
 ```
