@@ -1,8 +1,8 @@
 # Install
 
 ```
-yarn add react-any-height
-npm i react-any-height
+yarn add react-height-auto-transition
+npm i react-height-auto-transition
 ```
 
 # Usage
