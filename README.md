@@ -16,3 +16,7 @@ const App = () => (
     </ReactHeightAutoTransition>
 )
 ```
+
+# Demo
+
+https://react-height-auto-transition.netlify.com/
