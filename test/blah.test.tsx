@@ -6,9 +6,12 @@ describe('it', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     //
-    ReactDOM.render(<ReactHeightAutoTransition>
-      <div>test</div>
-    </ReactHeightAutoTransition>, div);
+    ReactDOM.render(
+      <ReactHeightAutoTransition>
+        <div>test</div>
+      </ReactHeightAutoTransition>,
+      div
+    );
     ReactDOM.unmountComponentAtNode(div);
   });
 });
