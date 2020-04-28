@@ -11,7 +11,6 @@
     "build": "tsdx build",
     "test": "tsdx test --env=jsdom --passWithNoTests",
     "lint": "tsdx lint",
-    "lint:fix": "yarn lint --fix",
     "prepare": "tsdx build"
   },
   "peerDependencies": {

@@ -1,37 +1,33 @@
-import React, { memo } from 'react';
+import * as React from 'react';
 
 type Props = {
-  children: React.ReactNode;
-  className?: string;
-};
+  children: React.ReactNode
+}
 
-function ReactHeightAutoTransition({ children, className }: Props) {
-  const ref = React.useRef<HTMLDivElement | null>(null);
+function Component({ children }: Props) {
+
+  const ref = React.useRef<HTMLDivElement | null>(null)
 
   React.useEffect(() => {
-    const { current: el } = ref;
-
-    if (!el || !el.firstChild) {
-      return;
+    const { current: el } = ref
+    if (el && el.firstChild) {
+      const firstChild = el.firstChild as HTMLDivElement
+      el.style.height = firstChild.scrollHeight + 'px'
     }
-
-    const firstChild = el.firstChild as HTMLDivElement;
-
-    el.style.height = firstChild.scrollHeight + 'px';
-  });
+  })
 
   return (
-    <div className={className} ref={ref} style={style}>
-      {children}
+    <div ref={ref} style={style}>
+      <div>{children}</div>
     </div>
-  );
+  )
 }
 
 const style: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   overflow: 'hidden',
-  transition: 'height 300ms ease',
-};
+  transition: 'height 300ms ease'
+}
 
-export default memo(ReactHeightAutoTransition);
+export const ReactHeightAutoTransition = React.memo(Component)
